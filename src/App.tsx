@@ -53,7 +53,7 @@ export default function App() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-background to-muted">
+    <div className="h-screen bg-gradient-to-b from-background to-muted flex flex-col ">
       {/* Header */}
       <header className="sticky top-0 z-10 border-b bg-background/80 backdrop-blur-sm">
         <div className="container flex h-16 items-center justify-between">
@@ -95,7 +95,7 @@ export default function App() {
       </header>
 
       {/* Main Content */}
-      <main className="container py-10 flex flex-col items-center justify-center min-h-[calc(100vh-4rem)]">
+      <main className=" py-10 flex flex-col items-center justify-center h-full">
         <Card className="w-full max-w-md mx-auto shadow-lg">
           <CardHeader className="text-center">
             <CardTitle className="text-2xl">Which Week UTHM</CardTitle>
@@ -143,13 +143,11 @@ export default function App() {
       </main>
 
       {/* Footer */}
-      <footer className="border-t py-6 md:py-0">
-        <div className="container flex flex-col items-center justify-between gap-4 md:h-16 md:flex-row">
-          <p className="text-sm text-muted-foreground">
+      <footer className="border-t py-6 md:py-0 flex p=10 justify-between  h-10 p-5">
+      <p className="text-sm text-muted-foreground">
             &copy; {new Date().getFullYear()} UTHM Week Tracker. All rights reserved.
           </p>
-          <p className="text-sm text-muted-foreground">Made with ❤️ for UTHM students</p>
-        </div>
+          <p className="text-sm text-left text-muted-foreground">Made with ❤️ for UTHM students</p>
       </footer>
     </div>
   )
