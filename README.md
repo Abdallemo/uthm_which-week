@@ -1,54 +1,55 @@
-# React + TypeScript + Vite
+# UTHM Week Tracker
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Introduction
 
-Currently, two official plugins are available:
+I got tired of never knowing which university week we're in, so I made this simple app to keep track of the current UTHM academic week. Now, no more guessing or checking old schedules!
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## Features
+```
+- Shows the current UTHM academic week instantly
+- Saves the selected start date so you don't have to re-enter it
+- Updates automatically based on your selected date
+- Super lightweight and fast (thanks to Vite!)
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Installation
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+1. Clone the repository:
+   git clone https://github.com/yourusername/uthm-week-tracker.git
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+2. Navigate to the project folder:
+   cd uthm-week-tracker
+
+3. Install dependencies:
+   npm install
+
+4. Start the development server:
+   npm run dev
+
+
+## Usage
 ```
+1. Open the app in your browser.
+2. Select the semester start date.
+3. The app will calculate and display the current UTHM week.
+4. Your selection is saved automatically for future visits.
+```
+
+## Built With
+```
+- React
+- TypeScript
+- Vite
+```
+
+## License
+```
+This project is open-source. Feel free to modify and use it however you like!
+```
+
+---
+```
+Made for UTHM students who just want a simple way to track their academic weeks. 🚀
+```
+
