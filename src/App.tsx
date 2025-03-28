@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react"
 import { format } from "date-fns"
-import { CalendarIcon, Clock,} from "lucide-react"
+import { CalendarIcon, Clock, } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Calendar } from "@/components/ui/calendar"
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover"
@@ -53,14 +53,14 @@ export default function App() {
   }
 
   return (
-    <div className="h-screen bg-gradient-to-b from-background to-muted flex flex-col ">
+    <div className="h-screen bg-background flex flex-col ">
       <header className="sticky top-0 z-10 border-b bg-background/80 backdrop-blur-sm">
         <div className="container flex h-16 items-start justify-between">
           <div className="flex items-center gap-2 ml-2 text-black">
             <Clock className="h-6 w-6 text-primary p-2" />
             <h1 className="text-xl font-bold">UTHM Week Tracker</h1>
           </div>
-          <GithubCorner href="https://github.com/Abdallemo/uthm_which-week" bannerColor="#242424" target="_blank"/>
+          <GithubCorner href="https://github.com/Abdallemo/uthm_which-week" bannerColor="#242424" target="_blank" />
         </div>
       </header>
       <main className=" py-10 flex flex-col items-center justify-center h-full">
@@ -108,11 +108,11 @@ export default function App() {
           </CardContent>
         </Card>
       </main>
-      <footer className="border-t py-6 md:py-0 flex p=10 justify-between  h-10 p-5">
-      <p className="text-sm text-muted-foreground">
-            &copy; {new Date().getFullYear()} UTHM Week Tracker. All rights reserved.
-          </p>
-          <p className="text-sm text-left text-muted-foreground">Made with ❤️by <span><a href="https://github.com/Abdallemo "target="_blank" className="text-blue-400">@abdallemo</a></span> for UTHM students</p>
+      <footer className="border-t py-6 md:py-0 flex p=10 justify-between  h-10 p-5 w-full bg-background">
+        <p className="text-sm text-muted-foreground">
+          &copy; {new Date().getFullYear()} UTHM Week Tracker. All rights reserved.
+        </p>
+        <p className="text-sm text-left text-muted-foreground">Made with ❤️by <span><a href="https://github.com/Abdallemo " target="_blank" className="text-blue-400">@abdallemo</a></span> for UTHM students</p>
       </footer>
     </div>
   )
