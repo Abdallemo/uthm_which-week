@@ -2,13 +2,13 @@
 
 import { useEffect, useState } from "react"
 import { format } from "date-fns"
-import { CalendarIcon, Clock, Home, Menu, Settings } from "lucide-react"
+import { CalendarIcon, Clock,} from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Calendar } from "@/components/ui/calendar"
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover"
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { cn } from "@/lib/utils"
+import GithubCorner from 'react-github-corner';
 
 export default function App() {
   const [date, setDate] = useState<Date | null>(() => {
@@ -54,47 +54,15 @@ export default function App() {
 
   return (
     <div className="h-screen bg-gradient-to-b from-background to-muted flex flex-col ">
-      {/* Header */}
       <header className="sticky top-0 z-10 border-b bg-background/80 backdrop-blur-sm">
-        <div className="container flex h-16 items-center justify-between">
+        <div className="container flex h-16 items-start justify-between">
           <div className="flex items-center gap-2 ml-2 text-black">
-            <Clock className="h-6 w-6 text-primary" />
+            <Clock className="h-6 w-6 text-primary p-2" />
             <h1 className="text-xl font-bold">UTHM Week Tracker</h1>
           </div>
-
-          <Sheet>
-            <SheetTrigger asChild>
-              <Button variant="ghost" size="icon" className="md:hidden bg-gray-800">
-                <Menu className="h-5 w-5" />
-                <span className="sr-only">Toggle menu</span>
-              </Button>
-            </SheetTrigger>
-            <SheetContent side="right">
-              <nav className="grid gap-6 text-lg font-medium">
-                <a href="#" className="flex items-center gap-2 text-primary">
-                  <Home className="h-5 w-5" />
-                  <span>Home</span>
-                </a>
-                <a href="#" className="flex items-center gap-2 text-muted-foreground">
-                  <Settings className="h-5 w-5" />
-                  <span>Settings</span>
-                </a>
-              </nav>
-            </SheetContent>
-          </Sheet>
-
-          <nav className="hidden md:flex items-center gap-6 text-sm font-medium">
-            <a href="#" className="text-primary">
-              Home
-            </a>
-            <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
-              Settings
-            </a>
-          </nav>
+          <GithubCorner href="https://github.com/Abdallemo/uthm_which-week" bannerColor="#242424"/>
         </div>
       </header>
-
-      {/* Main Content */}
       <main className=" py-10 flex flex-col items-center justify-center h-full">
         <Card className="w-full max-w-md mx-auto shadow-lg">
           <CardHeader className="text-center">
@@ -120,7 +88,6 @@ export default function App() {
                 <Calendar mode="single" selected={date || undefined} onSelect={handleDateChange} initialFocus />
               </PopoverContent>
             </Popover>
-
             <div className="text-center">
               <h2
                 className={cn(
@@ -141,13 +108,11 @@ export default function App() {
           </CardContent>
         </Card>
       </main>
-
-      {/* Footer */}
       <footer className="border-t py-6 md:py-0 flex p=10 justify-between  h-10 p-5">
       <p className="text-sm text-muted-foreground">
             &copy; {new Date().getFullYear()} UTHM Week Tracker. All rights reserved.
           </p>
-          <p className="text-sm text-left text-muted-foreground">Made with ❤️ for UTHM students</p>
+          <p className="text-sm text-left text-muted-foreground">Made with ❤️by <span><a href="https://github.com/Abdallemo "target="_blank" className="text-blue-400">@abdallemo</a></span> for UTHM students</p>
       </footer>
     </div>
   )
