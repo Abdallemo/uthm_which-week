@@ -60,7 +60,7 @@ export default function App() {
             <Clock className="h-6 w-6 text-primary p-2" />
             <h1 className="text-xl font-bold">UTHM Week Tracker</h1>
           </div>
-          <GithubCorner href="https://github.com/Abdallemo/uthm_which-week" bannerColor="#242424"/>
+          <GithubCorner href="https://github.com/Abdallemo/uthm_which-week" bannerColor="#242424" target="_blank"/>
         </div>
       </header>
       <main className=" py-10 flex flex-col items-center justify-center h-full">
