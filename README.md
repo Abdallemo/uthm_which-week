@@ -16,7 +16,7 @@ I got tired of never knowing which university week we're in, so I made this simp
 ## Installation
 
 1. Clone the repository:
-   git clone https://github.com/yourusername/uthm-week-tracker.git
+   git clone https://github.com/Abdallemo/uthm_which-week
 
 2. Navigate to the project folder:
    cd uthm-week-tracker
